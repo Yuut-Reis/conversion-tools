@@ -9,12 +9,12 @@ public class ConversionTools
 
     public void ConvertStrToInt()
     {
-        throw new NotImplementedException();
+        if(strVariable is string) intVariable = Convert.ToInt32(strVariable);
     }
 
     public void ConvertStrToDouble()
     {
-        throw new NotImplementedException();
+        
     }
 
     public void ConvertIntToStr()
