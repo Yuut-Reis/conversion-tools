@@ -28,11 +28,21 @@ public class TestFirstRequirement
 
 public class TestSecondRequirement
 {
-  [Theory]
+  [Theory(DisplayName = "convert the value stored in the strVariable variable to an double and store that value in the doubleVariable variable")]
   [InlineData("1.0", 1.0)]
+  [InlineData("-558.0", -558.0)]
   public void TestConvertStrToDouble(string entry, double expected)
   {
-    throw new NotImplementedException();
+        ConversionTools instance = new()
+    {
+      strVariable = entry,
+    };
+    var strTypeCheck = instance.strVariable is string;
+    strTypeCheck.Should().Be(true);
+    instance.ConvertStrToDouble();
+    instance.doubleVariable.Should().Be(expected);
+    var doubleTypeCheck = instance.doubleVariable is double;
+    doubleTypeCheck.Should().Be(true);
   }
 }
 
