@@ -47,11 +47,20 @@ public class TestSecondRequirement
 
 public class TestThirdRequirement
 {
-  [Theory]
+  [Theory(DisplayName = "converts the value stored in the intVariable variable to a string and storing that value in the")]
   [InlineData(1, "1")]
   public void TestConvertIntToStr(int entry, string expected)
   {
-    throw new NotImplementedException();
+     ConversionTools instance = new()
+    {
+      intVariable = entry,
+    };
+    var intTypeCheck = instance.intVariable is int;
+    intTypeCheck.Should().Be(true);
+    instance.ConvertIntToStr();
+    instance.strVariable.Should().Be(expected);
+    var stringTypeCheck = instance.strVariable is string;
+    stringTypeCheck.Should().Be(true);
   }
 }
 
