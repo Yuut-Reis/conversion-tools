@@ -30,7 +30,6 @@ public class TestSecondRequirement
 {
   [Theory(DisplayName = "convert the value stored in the strVariable variable to an double and store that value in the doubleVariable variable")]
   [InlineData("1.0", 1.0)]
-  [InlineData("-558.0", -558.0)]
   public void TestConvertStrToDouble(string entry, double expected)
   {
         ConversionTools instance = new()

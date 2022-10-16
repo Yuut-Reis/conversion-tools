@@ -13,9 +13,8 @@ public class ConversionTools
     }
 
     public void ConvertStrToDouble()
-    {
-        var formatDecimalPlace = 10;
-        if(strVariable is string) doubleVariable =  Convert.ToDouble(strVariable) / formatDecimalPlace;
+    {   
+       if(strVariable is string) doubleVariable = Convert.ToDouble(strVariable);
     }
 
     public void ConvertIntToStr()
