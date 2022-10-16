@@ -24,7 +24,7 @@ public class ConversionTools
 
     public void ConvertDoubleToStr()
     {
-        throw new NotImplementedException();
+        if(doubleVariable is double) strVariable = Convert.ToString(doubleVariable);
     }
 
 }
